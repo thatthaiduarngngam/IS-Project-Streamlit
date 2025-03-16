@@ -222,7 +222,7 @@ def page3():
                 probability = torch.sigmoid(output).item()
             
             result = "Placed" if probability >= 0.5 else "Not Placed"
-            st.success(f"ผลการทำนาย: **{result}** (ความน่าจะเป็น: {probability:.2f})")
+            st.success(f"ผลการทำนาย: **{result}**")
         except FileNotFoundError as e:
             st.error(f"ไม่พบไฟล์ที่ต้องการ: {str(e)}. กรุณาตรวจสอบว่าไฟล์ 'placement_model.pkl', 'scaler.pkl', และ 'label_encoder.pkl' อยู่ในโฟลเดอร์ที่ถูกต้อง")
         except Exception as e:
